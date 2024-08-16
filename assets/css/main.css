@@ -844,6 +844,7 @@ section,
   border: 0;
   padding: 4px 10px;
   width: 100%;
+  border-radius: 3px; 
 }
 
 .hero .sign-up-form input[type=email]:focus-visible {
