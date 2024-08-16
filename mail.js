@@ -14,8 +14,10 @@ const firebaseConfig = {
 
   //reference your database
   var contactFormDB = firebase.database().ref("emailForm");
+  var subscribeDB = firebase.database().ref("subscriptions");
 
   document.getElementById("contactForm").addEventListener("submit", submitForm);
+  document.getElementById("subscribeForm").addEventListener("submit", subscribeForm);
 
   function submitForm(e){
     e.preventDefault();
@@ -37,9 +39,7 @@ const firebaseConfig = {
 
   //   reset the form
   document.getElementById("contactForm").reset();
-
-    
-    
+  
   }
  
   const saveMessages = (name, emailid, msgContent) => {
@@ -52,8 +52,37 @@ const firebaseConfig = {
     });
   };
 
+
   const getElementVal = (id) => {
     return document.getElementById(id).value;
   };
+
+  //subscribe
+  function subscribeForm(e) {
+    e.preventDefault();
+    console.log('Subscribe Form submitted');
+
+    var email = getElementVal('subEmail');
+
+    saveSubscription(email);
+
+    // Enable alert
+    document.querySelector(".alert").style.display = "block";
+
+    // Remove the alert
+    setTimeout(() => {
+        document.querySelector(".alert").style.display = "none";
+    }, 3000);
+
+    // Reset the form
+    document.getElementById("subscribeForm").reset();
+}
+
+const saveSubscription = (email) => {
+    var newSubscription = subscribeDB.push();
+    newSubscription.set({
+        email: email
+    });
+};
 
   

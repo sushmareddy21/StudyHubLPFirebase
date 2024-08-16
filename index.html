@@ -80,16 +80,38 @@
             <p data-aos="fade-up" data-aos-delay="200">Connect, Collaborate, and Learn Smarter with AI-Powered Tools</p>
           </div>
           <div class="col-lg-5" data-aos="fade-up" data-aos-delay="300">
-            <form action="forms/newsletter.php" method="post" class="php-email-form">
+
+            <!-- !-- Subscribe Form at the top --> 
+            <form id="subscribeForm">
+             
               <div class="sign-up-form">
+              <!-- <label for="subEmail">Email:</label> -->
+              <input type="email" id="subEmail" placeholder="Enter your email" required>
+            
+              <button type="submit">Subscribe</button>
+            </form>
+            
+            <!-- Alert message for subscribe form -->
+            <div class="alert" style="display:none;">Thank you for subscribing!</div>
+
+          </div>
+
+            <!-- <form action="forms/newsletter.php" method="post" class="php-email-form">
+              <div class="sign-up-form">
+
+                <div class="inputBox">
+                  <input type="email" id="emailid" name="email" placeholder="Your Email....." title="Enter your email" required />
+              </div>
+
+
                   <label for="email">Email:</label>
                   <input type="email" id="email" name="email" placeholder="Enter your email" title="Your email address" required>
                   <input type="submit" value="Subscribe" title="Subscribe to the newsletter">
               </div>
               <div class="loading">Loading</div>
               <div class="error-message"></div>
-              <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-          </form>
+              <div class="sent-message">Your subscription request has been sent. Thank you!</div> -->
+          <!-- </form> -->
           
           </div>
         </div>
@@ -137,7 +159,7 @@
 
         <div class="row gy-4 align-items-stretch justify-content-between features-item ">
           <div class="col-lg-6 d-flex align-items-center features-img-bg" data-aos="zoom-out">
-            <img src="assets/img/features-light-3.jpg" class="img-fluid" alt="">
+            <img src="assets/img/smart scheduling assistant.jpeg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-5 d-flex justify-content-center flex-column" data-aos="fade-up">
             <h3>Smart Scheduling Assistant</h3>
@@ -148,7 +170,7 @@
 
         <div class="row gy-4 align-items-stretch justify-content-between features-item ">
           <div class="col-lg-6 d-flex align-items-center features-img-bg" data-aos="zoom-out">
-            <img src="assets/img/features-light-3.jpg" class="img-fluid" alt="">
+            <img src="assets/img/AI-Powered Chatbot.png" class="img-fluid" alt="">
           </div>
           <div class="col-lg-5 d-flex justify-content-center flex-column" data-aos="fade-up">
             <h3>AI-Powered Chatbot</h3>
@@ -159,7 +181,7 @@
 
         <div class="row gy-4 align-items-stretch justify-content-between features-item ">
           <div class="col-lg-6 d-flex align-items-center features-img-bg" data-aos="zoom-out">
-            <img src="assets/img/features-light-3.jpg" class="img-fluid" alt="">
+            <img src="assets/img/Automated Note Summarization.png" class="img-fluid" alt="">
           </div>
           <div class="col-lg-5 d-flex justify-content-center flex-column" data-aos="fade-up">
             <h3>Automated Note Summarization</h3>
@@ -170,7 +192,7 @@
 
         <div class="row gy-4 align-items-stretch justify-content-between features-item ">
           <div class="col-lg-6 d-flex align-items-center features-img-bg" data-aos="zoom-out">
-            <img src="assets/img/features-light-3.jpg" class="img-fluid" alt="">
+            <img src="assets/img/Personalized Learning Paths.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-5 d-flex justify-content-center flex-column" data-aos="fade-up">
             <h3>Personalized Learning Paths</h3>

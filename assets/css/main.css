@@ -808,18 +808,39 @@ section,
   font-size: 20px;
 }
 
-.hero .sign-up-form {
-  margin-top: 20px;
-  margin-bottom: 15px;
-  padding: 10px;
+
+
+/* General styles for the subscribe button */
+#subscribeForm button {
+  border: 0;
+  box-shadow: none;
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  padding: 8px 20px;
   border-radius: 7px;
-  background: color-mix(in srgb, var(--default-color) 5%, white 90%);
-  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
-  display: flex;
+  color: var(--contrast-color);
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 16px;
 }
 
+/* Hover effect */
+#subscribeForm button:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 10%);
+  /* background-color: darken(var(--accent-color), 10%); */
+  border-color: darken(var(--accent-color), 10%);
+}
+
+/* Focus effect */
+#subscribeForm button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+
 .hero .sign-up-form input[type=email] {
-  background-color: transparent;
+  background-color: white;
+  margin-bottom: 10px;
   border: 0;
   padding: 4px 10px;
   width: 100%;
@@ -1996,7 +2017,7 @@ section,
 }
 
 .contact form .alert {
-  color: #606860;
+  color: #282b28;
 }
 
 .contact form .error-message {
